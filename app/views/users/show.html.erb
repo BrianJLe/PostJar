@@ -1,0 +1,18 @@
+<div class="right">
+	<% if user_signed_in? %>
+	<%= render 'shared/follow_form' , user: @user%>
+	<% end %>
+</div>
+<%= image_tag @user.avatar.url(:thumb), class: 'profile' %>
+<span class="left">
+	<h4><%= @user.name %></h4>
+</span>
+<div class="row feed ">
+	<% if @activities.empty? %>
+	You have no posts yet!
+	<% else %>
+	<% @activities.each do |activity| %>
+	<%= render_activity(activity) %>
+	<% end %>
+	<% end %>
+</div>

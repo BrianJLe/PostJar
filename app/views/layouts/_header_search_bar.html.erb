@@ -1,0 +1,16 @@
+<form action="<%= posts_url %>" method="get" class="form-inline">
+
+<% if !main_page %>
+
+    <%= tag "input", type: "text",
+              placeholder: "What? (Guitar? Chef?)",
+                     name: "post_filters[content]",
+          #   autocomplete: "autocomplete_spaces_title",
+                    class: "form-control",
+                       id: "header-search-input" %>
+                        <input type="submit" style="position: absolute; left: -9999px"/>
+
+
+<%end%>
+
+</form>

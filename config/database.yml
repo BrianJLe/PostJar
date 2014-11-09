@@ -1,0 +1,15 @@
+  development:
+    adapter: postgresql
+    encoding: unicode
+    database: postjar_dev
+    pool: 5
+    host: localhost
+    port: 5432
+
+  test:
+    adapter: postgresql
+    encoding: unicode
+    database: postjar_test
+    pool: 5
+    host: localhost
+    port: 5432
